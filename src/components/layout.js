@@ -1,11 +1,14 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-const Layout = () => {
-  return (
-    <div>
+const Layout = ({ children }) => (
+  <div>
+    {children}
+  </div>
+);
 
-    </div>
-  )
-}
+Layout.propTypes = {
+  children: PropTypes.instanceOf(Object).isRequired,
 
-export default Layout
+};
+export default Layout;
